@@ -15,7 +15,10 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { OrderSuccessComponent } from './order-success/order-success.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { LoginComponent } from './login/login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { LoginComponent } from './login/login.component';
     OrderSuccessComponent,
     MyOrdersComponent,
     AdminOrdersComponent,
+    AdminProductsComponent,
     LoginComponent
   ],
   imports: [
@@ -42,9 +46,11 @@ import { LoginComponent } from './login/login.component';
       { path: 'check-out', component: CheckOutComponent},
       { path: 'order-success', component: OrderSuccessComponent},
       { path: 'login', component: LoginComponent},
-      { path: 'admin/products', component: AdminOrdersComponent},
-      { path: 'admin/orders', component: AdminOrdersComponent}
-    ])
+      { path: 'admin/products', component: AdminProductsComponent},
+      { path: 'admin/orders', component: AdminOrdersComponent},
+      { path: 'my/orders', component: MyOrdersComponent}
+    ]),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
